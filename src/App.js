@@ -13,6 +13,9 @@ import { React   , useState , useEffect } from 'react';
 
 // Component Import
 import ToggleExample from './ToggleExample.js';
+import CoolButton from './CoolButton.js';
+
+import TreeTop from './TreeTop';
 
 
 
@@ -65,6 +68,17 @@ function App( ){  // App( ~props~ )
     
     } 
  
+
+
+    const handleSuperCoolButton =( )=>{ 
+  
+      console.log("🔥COOL🔥")  //
+
+        // alert( "🔥COOL🔥" );
+      
+      window.alert( "🔥COOL🔥" );
+      
+    }
   //// js
 
   ////////////////////////////////
@@ -73,7 +87,42 @@ function App( ){  // App( ~props~ )
   return (
     <div>
 
+      
+      {/* 
+      
+        // 🎶🎶🎶🔔🎶🎶🎶 //
+        < TreeTop />
+
+        < BranchesBelow />
+        //    🎶🔔🎶    //
+
+        
+      */}
+      < TreeTop />
+
+
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+
+
+      <button  onClick={ handleSuperCoolButton } >  🆒😎🔥SuperCOOL!!!! </button>
+
+      < CoolButton
+      
+        onClickButItsAProp={ handleSuperCoolButton }
+        someCoolText={"🔥COOL🔥"} 
+
+      />
+
+
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+
+
       < ToggleExample />
+
 
       <br/><br/><br/><br/><br/><br/><br/><br/>
       <br/><br/><br/><br/><br/><br/><br/><br/>

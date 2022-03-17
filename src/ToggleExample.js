@@ -9,7 +9,6 @@ function ToggleExample( ){
 
         let show = true
 
-
       //const [ someVariable , someSetterFunction ] = useState( someStartValue ) 
         const [ showText     , toggleShowText     ] = useState( true )  // useState Causes ReRenders
             console.log( "State Of showText: " , showText )  //
@@ -18,10 +17,10 @@ function ToggleExample( ){
 
                 console.log( "toggle 👀" )  //
 
-                //X// a NO-NO for Visual Changes
-                    show = !show
-                    console.log( "show: " , show )  //
-                //// This will ONLY make Internal Changes
+                    //X// a NO-NO for Visual Changes
+                        show = !show
+                        console.log( "show: " , show )  //
+                    //// This will ONLY make Internal Changes
 
                 toggleShowText( !showText )  // our Setter Function
 
@@ -33,9 +32,12 @@ function ToggleExample( ){
     return(<div>
 
         {
-            // someVariable  ?  true : false
 
-            // showText ~ true 🔁 false
+            //// Ternary Syntax Flow
+            // someVariable  ?  true : false
+            ////
+
+            // showText  ~  true 🔁 false
             showText ?
 
             // true
@@ -44,7 +46,54 @@ function ToggleExample( ){
             : 
             
             <h2 onClick={ handleH2Toggle } > BOOM! WE TOGGLED!!!! </h2>
-            // false
+            // false          
+
+        }
+        <br/><br/>
+        <h2>
+            - Wooblay! -
+        </h2>
+        <br/><br/>
+
+        {
+
+            <h2 onClick={ handleH2Toggle } >
+                { 
+                    showText ?
+
+                    // true
+                    "Toggle Example - Ternary In Text Space" 
+
+                    :
+
+                    "BOOM! This is how we'd kinda change the textContent here in TheJungle"
+                    // false
+                }
+            </h2>
+
+            // <h2 onClick={ handleH2Toggle } > Toggle Example - Ternary In Text Space </h2> 
+            
+            // <h2>.addEventListener( "click" , handleH2Toggle )
+            /*
+
+                let show = true 
+
+                <h2>.addEventListener( "click" , function(){
+
+                    // change something on theDOM
+
+                    show ?
+
+                    h2.textContent = "Toggle Example"
+
+                    :
+
+                    h2.textContent = " BOOM! WE TOGGLED!!!!"
+
+
+                } )
+
+            */
 
         }
 
