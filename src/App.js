@@ -17,6 +17,8 @@ import CoolButton from './CoolButton.js';
 
 import TreeTop from './TreeTop';
 
+import ReactForms from './ReactForms';
+
 
 
 
@@ -86,6 +88,14 @@ function App( ){  // App( ~props~ )
   //// html like structure ~ JSX
   return (
     <div>
+
+
+      < ReactForms />
+
+
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/>
+      <br/><br/><br/><br/><br/><br/><br/><br/>
 
       
       {/* 
